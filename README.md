@@ -23,7 +23,7 @@ Call the module like so:
 
 ```hcl
 module "base_firewall" {
-  source               = "https://github.com/NicholasPCole/terraform-digitalocean-base-firewall"
+  source               = "github.com/NicholasPCole/terraform-digitalocean-base-firewall"
   
   trusted_ip_addresses = ["192.0.2.0/24", "203.0.113.50/32"]
 }
