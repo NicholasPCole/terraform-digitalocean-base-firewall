@@ -9,13 +9,13 @@ A Cloud Firewall allowing ports for the following services will be created:
 * Inbound: Ping, SSH
 * Outbound: Ping, Whois, DNS, HTTP, HTTPS, NTS
 
-A tag named "base" will also be created and added to the firewall. You will need to add this tag to any Droplets you create to apply the firewall.
+It will be applied to a tag that you create, named "base" by default. The tag is not provided by this module.
 
 SSH connections will only be allowed from trusted IP addresses specified in module input.
 
 ## Requirements
 
-This module does not have any special requirements.
+You will need a tag already created in your account to add to the firewall (and Droplets when you create them). By default, the "base" tag is used, but you can customize this variable.
 
 ## Usage
 

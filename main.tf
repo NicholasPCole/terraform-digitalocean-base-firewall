@@ -1,6 +1,10 @@
+data "digitalocean_tag" "base" {
+  name = var.tag_name
+}
+
 resource "digitalocean_firewall" "base" {
   name = "base"
-  tags = [digitalocean_tag.base.name]
+  tags = [data.digitalocean_tag.base.name]
 
   # Ping
   inbound_rule {
@@ -62,10 +66,6 @@ resource "digitalocean_firewall" "base" {
     port_range            = "4460"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
-}
-
-resource "digitalocean_tag" "base" {
-  name = "base"
 }
 
 terraform {
