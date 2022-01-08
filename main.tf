@@ -17,8 +17,8 @@ resource "digitalocean_firewall" "base" {
 
   # Ping
   outbound_rule {
-    protocol         = "icmp"
-    source_addresses = ["0.0.0.0/0", "::/0"]
+    protocol              = "icmp"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 
   # Whois
