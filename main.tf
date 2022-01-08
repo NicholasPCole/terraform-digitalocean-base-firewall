@@ -1,6 +1,6 @@
 resource "digitalocean_firewall" "base" {
   name = "base"
-  tags = digitalocean_tag.base.name
+  tags = [digitalocean_tag.base.name]
 
   # Ping
   inbound_rule {
