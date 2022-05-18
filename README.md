@@ -7,7 +7,7 @@ This module creates a set of minimal firewall rules suitable for application to 
 A Cloud Firewall allowing ports for the following services will be created:
 
 * Inbound: Ping, SSH
-* Outbound: Ping, Whois, DNS, HTTP, HTTPS, NTS
+* Outbound: Ping, Whois, DNS, HTTP, HTTPS, NTP, NTS
 
 It will be applied to a tag that you create, named "base" by default. The tag is not provided by this module.
 

@@ -53,6 +53,13 @@ resource "digitalocean_firewall" "base" {
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 
+  # NTP
+  outbound_rule {
+    protocol              = "udp"
+    port_range            = "123"
+    destination_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
   # HTTPS
   outbound_rule {
     protocol              = "tcp"
