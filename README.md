@@ -29,3 +29,4 @@ module "base_firewall" {
 }
 ```
 
+Only `trusted_ip_addresses` is required, in order to limit which IP addresses can make SSH connections to Droplets.
